@@ -1,0 +1,137 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 300px;
+    padding: 0 0 15px 0;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .form .message {
+    margin: 15px 0 0;
+    color: #999; 
+    font-size: 12px;
+  }
+  
+    
+  .container:before,
+  .container:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .container .info {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .container .info h2 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a; 
+  }
+
+  .thumbnail {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border-radius: 30%;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  
+  .thumbnail img {
+    display: block;
+    width: 100%;
+  }
+  
+  .form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: rgb(110, 146, 196);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.iconos button{
+  background-color: #285282; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 25px; /* Bordes redondeados */
+  padding: 10px 10px; /* Espaciado interior */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .button{
+    outline: 0;
+    background: #063f59;
+    width: 100%;
+    border: 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+.boton {
+    background-color: rgb(110, 146, 196);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 35px;
+}
+
+.boton:hover {
+    background-color: rgb(90, 126, 176);
+}

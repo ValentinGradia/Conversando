@@ -1,0 +1,38 @@
+<div class="body">
+  <div class="chat" style="background-color: black;">
+      <div class="chat-header">
+        <div style="width: 40%;text-align: start;">
+          <button (click)="volver()" style="background-color: transparent;"> 
+            <i style="color: white;" class="fa-solid fa-backward fa-xl"></i></button>
+        </div>
+        <div style="width: 60%; text-align: start;">
+          <h2>Conversación</h2>
+        </div>
+      </div>
+      <div class="chat-content" id="chatContent">
+          @for (chat of chats; track $index) {
+              <ul style="list-style-type: none;text-align: left;">
+                  <!--ngClass te permite agregar css dinamico aplicando condiciones
+                  aca estoy diciendo que cuando el correo lo mande el usuario logeado se aplice
+                  la clasechat-right (me manda el texto a la derrecha) -->
+                  <li [ngClass]="{'chat-right ': chat.Correo === correoUsuarioActual}">
+                      <h1 style="font-weight: bold;font-size: 17px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: white;">{{chat.Mensaje}}</h1>
+                      <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 9px;color:white;" class="diagonal-text">
+                        @if (chat.Correo  === correoUsuarioActual) {
+                          {{(chat.FechaFormateada) }}
+                        }
+                        @else {
+
+                          {{ chat.Correo + ' - ' + (chat.FechaFormateada) }}
+                        }
+                      </p>
+                  </li>
+              </ul>
+          }
+      </div>
+      <div class="chat-bottom" style="background-color: #3c3c3c;">
+          <input type="text" id="messageInput" [(ngModel)]="mensaje"  placeholder="Escribe un mensaje..." />
+          <button (click)="enviarMensaje()">Enviar</button>
+      </div>
+  </div>
+</div> 

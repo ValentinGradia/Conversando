@@ -1,13 +1,27 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
+  usuario = new BehaviorSubject<string | null>(null);
+  correoUsuario = this.usuario.asObservable();
+
   constructor(private firestore: AngularFirestore) { }
 
+  setearCorreo(email : string)
+  {
+    //metodo next asigno el email al objeto
+    this.usuario.next(email);
+  }
+
+  limpiarCorreo()
+  {
+    this.usuario.next(null);
+  }
   async agregarUsuario(sexo: string, perfil: string, correo: string, contrasenia: string)
   {
     try
